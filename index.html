@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/forest.png">
+    <title>Jungle | it's time for a new adventure !</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header id="header">
+        <a href="#" class="logo">Jungle</a>
+        <ul>
+            <li>
+                <a href="#" class="active">Home</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Destination</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </header>
+
+    <!-- TITRE -->
+    <section>
+        <h2 id="text">
+            <span>It's time for a new</span><br>Adventure
+        </h2>
+        <img src="images/bird1.png" id="bird1">
+        <img src="images/bird2.png" id="bird2">
+        <img src="images/forest.png" id="forest">
+        <a href="#" id="btn">Explore</a>
+        <img src="images/rocks.png" id="rocks">
+        <img src="images/water.png" id="water">
+    </section>
+
+    <!-- TEXTE -->
+    <div class="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum rutrum tempus. Nam malesuada est eu purus finibus viverra. Integer luctus lectus sapien, eget pretium nisi fermentum ac. Suspendisse non magna magna. Vestibulum placerat sed risus non vestibulum. Suspendisse mollis sem in turpis luctus suscipit. In hac habitasse platea dictumst. Mauris elementum accumsan libero a auctor. Curabitur commodo luctus lacus, eu elementum leo finibus eu. Donec laoreet ex eget arcu ultricies, at tempus leo iaculis.<br><br>
+            Quisque quis ornare lacus, ac semper augue. Ut interdum id justo quis consequat. Donec faucibus et purus ut molestie. Phasellus a interdum lectus. Praesent vitae mi volutpat, vehicula nunc sollicitudin, fermentum dui. Donec egestas aliquet est, eu suscipit sapien accumsan eget. Mauris euismod dapibus nunc, ac blandit arcu finibus a. Aenean dictum ex quis leo venenatis hendrerit. Integer tincidunt ex viverra lacus molestie fermentum. Mauris ex nibh, vulputate in eros tincidunt, lobortis sodales tellus. Ut ut felis ut nibh porttitor fringilla. Etiam non ante tincidunt, porta augue quis, sodales augue. Praesent fermentum, elit sit amet suscipit ullamcorper, odio purus eleifend mi, ut semper sem purus vel mauris. Etiam quis mauris congue, feugiat tellus ut, rutrum lorem.<br><br>
+            Cras aliquam, lectus vel maximus aliquam, arcu lorem dignissim ante, a fringilla sem felis eu eros. Aenean libero justo, tempor at erat sed, imperdiet sollicitudin odio. In ante ante, lobortis eu porta ac, consectetur id quam. Vivamus massa ipsum, varius a purus at, dictum ultrices magna. In hac habitasse platea dictumst. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque dolor neque, ornare quis ultricies vel, placerat ut velit. Mauris nec odio placerat, efficitur metus at, tincidunt tellus. Mauris sodales placerat luctus. In consequat eleifend mi vel rutrum. Phasellus vestibulum sem lorem, nec accumsan justo porta eu.<br><br>
+            Curabitur ut est vitae neque porttitor ullamcorper quis a erat. Vivamus ultricies rutrum nisl quis dapibus. Nunc eleifend gravida libero. Suspendisse maximus ipsum eros, sit amet viverra velit auctor vel. Nullam vel metus metus. Fusce lectus leo, sagittis nec malesuada ut, interdum vitae arcu. Proin felis libero, congue et erat id, cursus posuere eros. Quisque felis magna, cursus sed risus eu, lobortis placerat velit. Mauris mattis feugiat mauris, vitae fermentum velit rhoncus mollis. Praesent eget maximus nisl. Aliquam rutrum massa eu suscipit bibendum. Proin nec eros aliquam, hendrerit nibh cursus, scelerisque magna. Aliquam vehicula odio eu diam ullamcorper, sit amet vulputate tellus tincidunt. Integer viverra nibh leo. Curabitur vitae magna nunc. Vestibulum ut ullamcorper leo.<br><br>
+            Suspendisse potenti. Pellentesque ut nulla nec enim fermentum porta. Donec vehicula dapibus mi nec commodo. Integer malesuada nunc eu leo mattis fringilla eu ut tortor. Morbi at nibh vestibulum, venenatis ligula at, lacinia enim. Aliquam accumsan turpis vel pharetra finibus. Maecenas bibendum risus augue, sit amet dapibus velit elementum nec. Nulla mollis erat tempus massa convallis, sit amet consequat metus ultrices. Nulla tristique dolor ac est accumsan, scelerisque laoreet nisi eleifend. Donec faucibus eget elit vel iaculis.<br>
+        </p>
+    </div>
+
+    <script>
+        let text = document.getElementById('text');
+        let bird1 = document.getElementById('bird1');
+        let bird2 = document.getElementById('bird2');
+        let forest = document.getElementById('forest');
+        let btn = document.getElementById('btn');
+        let rocks = document.getElementById('rocks');
+        let water = document.getElementById('water');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            text.style.top = 50 + value * -0.5 + '%';
+            bird1.style.top = value * -1.5 + 'px';
+            bird1.style.left = value * 2 + 'px';
+            bird2.style.top = value * -1.5 + 'px';
+            bird2.style.left = value * -5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            rocks.style.top = value * -0.12 + 'px';
+            forest.style.top = value * 0.25 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        });
+    </script>
+</body>
+</html>
